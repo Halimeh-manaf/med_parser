@@ -43,7 +43,7 @@
 - Download a [zipformer model](https://github.com/k2-fsa/sherpa-onnx/releases/tag/asr-models) and place it in assets/model and make sure to reflect the name of the model in the respective [class](link-to-class). The App was built and tested using [this model](https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20-mobile.tar.bz2). 
 
 - For more information about the model, you can [read more here](https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20-mobile.tar.bz2)
-
+- Finally, simply run `fvm flutter run -d <device_id>`
 
 > **Note**
 > The assets folder should look like this after importing the model:
