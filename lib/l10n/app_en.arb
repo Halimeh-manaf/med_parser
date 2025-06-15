@@ -1,0 +1,10 @@
+{
+  "errorTitle": "An error occurred",
+  "getStarted": "Get Started",
+  "goHome" : "Go Home",
+  "notFoundMessage":"404 - Page not found!",
+  "speechToTextAppBarTitle" : "Real-time Speech Recognition",
+  "speechToTextHint" : "Transcribed text will appear here..." ,
+  "tapToStart" : "Tap to Start",
+  "listening" : "Listening..." 
+}
