@@ -66,7 +66,6 @@ class SpeechToTextRepository {
       final samplesFloat32 = convertBytesToFloat32(Uint8List.fromList(data));
       _stream!.acceptWaveform(samples: samplesFloat32, sampleRate: _sampleRate);
 
-      /// TODO: understand this part
       while (_recognizer.isReady(_stream!)) {
         _recognizer.decode(_stream!);
       }
