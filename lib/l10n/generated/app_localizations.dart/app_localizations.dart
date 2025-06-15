@@ -141,6 +141,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Listening...'**
   String get listening;
+
+  /// No description provided for @onboardingSubTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Instant transcription for clear, efficient communication'**
+  String get onboardingSubTitle;
+
+  /// No description provided for @onboardingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Speech-to-Text in Real-Time'**
+  String get onboardingTitle;
 }
 
 class _AppLocalizationsDelegate

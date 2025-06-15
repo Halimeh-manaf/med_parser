@@ -6,5 +6,7 @@
   "speechToTextAppBarTitle" : "Real-time Speech Recognition",
   "speechToTextHint" : "Transcribed text will appear here..." ,
   "tapToStart" : "Tap to Start",
-  "listening" : "Listening..." 
+  "listening" : "Listening..." ,
+  "onboardingSubTitle" : "Instant transcription for clear, efficient communication",
+  "onboardingTitle": "Speech-to-Text in Real-Time" 
 }

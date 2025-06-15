@@ -7,7 +7,7 @@ import 'package:record/record.dart';
 import 'package:sherpa_onnx/sherpa_onnx.dart';
 import 'package:med_parser/features/speech_to_text/data/speech_to_text_repository.dart';
 import 'package:med_parser/features/speech_to_text/domain/speech_to_text_result.dart';
-import '../../../mocks.dart';
+import '../../../test_util/mocks.dart';
 
 void main() {
   late SpeechToTextRepository speechToTextRepository;

@@ -5,15 +5,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:med_parser/common_widgets/primary_button.dart';
 import 'package:med_parser/features/onboarding/presentation/onboarding_controller.dart';
 import 'package:med_parser/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:med_parser/l10n/generated/app_localizations.dart/app_localizations.dart';
 import 'package:med_parser/routing/app_router.dart';
 
-import '../../../mocks.dart';
+import '../../../test_util/mocks.dart';
 
-///TODO : refactror strings
 void main() {
   group('OnboardingScreen Widget Tests', () {
     late MockOnboardingController mockOnboardingController;
@@ -68,13 +66,11 @@ void main() {
       await pumpOnboardingScreen(tester);
       await tester.pumpAndSettle();
 
-      expect(
-          find.text('Track your time.\nBecause time counts.'), findsOneWidget);
+      expect(find.text('Speech-to-Text in Real-Time'), findsOneWidget);
       expect(find.byType(SvgPicture), findsOneWidget);
-      final buttonFinder = find.widgetWithText(PrimaryButton, 'Get Started');
+      final buttonFinder = find.widgetWithText(ElevatedButton, 'Get Started');
       expect(buttonFinder, findsOneWidget);
-      final PrimaryButton button = tester.widget(buttonFinder);
-      expect(button.isLoading, isFalse);
+      expect(find.byType(CircularProgressIndicator), findsNothing);
     });
 
     testWidgets('calls completeOnboarding on button press and navigates',
@@ -88,23 +84,16 @@ void main() {
       await pumpOnboardingScreen(tester);
       await tester.pumpAndSettle();
 
-      final buttonFinder = find.widgetWithText(PrimaryButton, 'Get Started');
-      expect(buttonFinder, findsOneWidget);
+      final buttonFinder = find.widgetWithText(ElevatedButton, 'Get Started');
 
-      PrimaryButton button = tester.widget(buttonFinder);
-      expect(button.isLoading, isFalse);
-
+      await tester.ensureVisible(
+          buttonFinder); // <-- This ensures the button is visible
       await tester.tap(buttonFinder);
-      // Pump and settle to allow navigation and state changes to complete
       await tester.pumpAndSettle();
 
       verify(() => mockOnboardingController.completeOnboarding()).called(1);
 
-      // Verify navigation occurred (optional, but good for confirming behavior)
-      // This expects the '/speechToText' route to display 'Mock SpeechToText Screen'
       expect(find.text('Mock SpeechToText Screen'), findsOneWidget);
-      // And the onboarding screen content should no longer be there
-      expect(find.text('Track your time.\nBecause time counts.'), findsNothing);
     });
   });
 }

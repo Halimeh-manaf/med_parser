@@ -6,7 +6,6 @@ import 'package:med_parser/utils/number_extension.dart';
 import 'package:med_parser/l10n/generated/app_localizations.dart/app_localizations.dart';
 
 /// Placeholder widget showing a message and CTA to go back to the home screen.
-/// TODO: Make sure Google firebase files are deleted
 class EmptyPlaceholderWidget extends ConsumerWidget {
   const EmptyPlaceholderWidget({super.key, required this.message});
   final String message;

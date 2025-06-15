@@ -4,7 +4,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:med_parser/features/speech_to_text/presentation/speech_to_text_controller.dart';
 import 'package:med_parser/features/speech_to_text/domain/speech_to_text_result.dart';
 
-import '../../../mocks.dart';
+import '../../../test_util/mocks.dart';
 
 void main() {
   late MockSpeechToTextRepository mockRepository;

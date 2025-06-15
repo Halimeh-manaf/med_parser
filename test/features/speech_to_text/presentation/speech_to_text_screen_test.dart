@@ -4,12 +4,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:med_parser/features/speech_to_text/domain/speech_to_text_state.dart';
 import 'package:med_parser/features/speech_to_text/presentation/speech_to_text_controller.dart';
-
 import 'package:med_parser/features/speech_to_text/presentation/speech_to_text_screen.dart';
+import '../../../test_util/mocks.dart';
+import '../../../test_util/test_utils.dart';
 
-import '../../../mocks.dart';
-
-///TODO: FIx tests!!!
 void main() {
   late MockSpeechToTextController mockController;
 
@@ -27,8 +25,8 @@ void main() {
         overrides: [
           speechToTextControllerProvider.overrideWith((ref) => mockController),
         ],
-        child: const MaterialApp(
-          home: SpeechToTextScreen(),
+        child: wrapWithMaterialAppWithLocalization(
+          const SpeechToTextScreen(),
         ),
       ),
     );

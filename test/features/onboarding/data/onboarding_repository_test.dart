@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:med_parser/features/onboarding/data/onboarding_repository.dart';
 
-import '../../../mocks.dart';
+import '../../../test_util/mocks.dart';
 
 void main() {
   group('OnboardingRepository Tests', () {

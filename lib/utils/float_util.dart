@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-/// TODO: make it as extension on [Uint8List] or [ByteData]
 Float32List convertBytesToFloat32(Uint8List bytes) {
   final values = Float32List(bytes.length ~/ 2);
 

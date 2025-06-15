@@ -31,4 +31,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listening => 'Listening...';
+
+  @override
+  String get onboardingSubTitle =>
+      'Instant transcription for clear, efficient communication';
+
+  @override
+  String get onboardingTitle => 'Speech-to-Text in Real-Time';
 }
