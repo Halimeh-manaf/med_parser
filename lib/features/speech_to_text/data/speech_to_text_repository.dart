@@ -68,10 +68,9 @@ class SpeechToTextRepository {
 
       /// TODO: understand this part
       while (_recognizer.isReady(_stream!)) {
-        debugPrint('isReady...');
         _recognizer.decode(_stream!);
       }
-      debugPrint('isReady not ...');
+
       final result = _recognizer.getResult(_stream!);
       final isEndpoint = _recognizer.isEndpoint(_stream!);
 

@@ -1,4 +1,3 @@
-
 <h1 align="center">
   MedParser
 </h1>
@@ -12,13 +11,26 @@
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+<center>
+<table>
+  <tr>
+    <td align="center">
+      <img src="readme_assets/ios_demo.gif" alt="iosgif" /><br/>
+      <b>iOS Demo</b>
+    </td>
+    <td align="center">
+      <img src="readme_assets/android_demo.gif" alt="androidgif" /><br/>
+      <b>Android Demo</b>
+    </td>
+  </tr>
+</table>
+</center>
 
 ## Key Features
 * **Core Framework**: Built with Flutter and the Dart programming language.
 * **State Management**: Riverpod for managing application state.
 * **Audio Recording**: Uses the microphone of the device (tested on iOS & Android)
-* **Testing**: Unit & Widget test with a coverage of --- & basic Integration test
+* **Testing**: Unit & Widget test & basic Integration test
 * **Localization**: Implements Internationalization using [Flutter's localization features](https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization) configured in l10n.yaml
 * **Flutter Version Management**: Uses FVM (.fvmrc) to manage the Flutter SDK version.
 * **Speech Recognition**: Incorporates ONNX models for on-device speech recognition.
