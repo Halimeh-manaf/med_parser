@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:med_parser/constants/app_colors.dart';
 import 'package:sherpa_onnx/sherpa_onnx.dart';
 import 'package:med_parser/l10n/generated/app_localizations.dart/app_localizations.dart';
 import 'package:med_parser/routing/app_router.dart';
@@ -8,8 +9,6 @@ import 'package:med_parser/routing/app_startup.dart';
 
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
-
-  static const primaryColor = Colors.indigo;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -31,10 +30,10 @@ class MyApp extends ConsumerWidget {
         );
       },
       theme: ThemeData(
-        colorSchemeSeed: primaryColor,
+        colorSchemeSeed: AppColors.primaryColor,
         unselectedWidgetColor: Colors.grey,
         appBarTheme: const AppBarTheme(
-          backgroundColor: primaryColor,
+          backgroundColor: AppColors.primaryColor,
           foregroundColor: Colors.white,
           elevation: 2.0,
           centerTitle: true,
@@ -43,18 +42,18 @@ class MyApp extends ConsumerWidget {
         dividerColor: Colors.grey[400],
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: primaryColor,
+            backgroundColor: AppColors.primaryColor,
             foregroundColor: Colors.white,
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
-            backgroundColor: primaryColor,
+            backgroundColor: AppColors.primaryColor,
             foregroundColor: Colors.white,
           ),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: primaryColor,
+          backgroundColor: AppColors.primaryColor,
         ),
       ),
       debugShowCheckedModeBanner: false,

@@ -67,7 +67,7 @@ class AppStartupErrorWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(message, style: Theme.of(context).textTheme.headlineSmall),
-            Sizes.spacingL.hSpace,
+            Sizes.spacingXl.hSpace,
             ElevatedButton(
               onPressed: onRetry,
               child: const Text('Retry'),

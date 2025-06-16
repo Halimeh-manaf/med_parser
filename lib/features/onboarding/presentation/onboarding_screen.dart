@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:med_parser/constants/app_colors.dart';
 import 'package:med_parser/constants/app_sizes.dart';
 import 'package:med_parser/features/onboarding/presentation/onboarding_controller.dart';
 import 'package:med_parser/l10n/generated/app_localizations.dart/app_localizations.dart';
@@ -24,8 +25,8 @@ class OnboardingScreen extends ConsumerWidget {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xff407FBD),
-              Color(0xff5FC4E2),
+              AppColors.primaryColor,
+              AppColors.secondaryColor,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -43,11 +44,11 @@ class OnboardingScreen extends ConsumerWidget {
                     style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: Sizes.spacingL,
+                          fontSize: Sizes.spacingXl,
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  Sizes.spacingL.hSpace,
+                  Sizes.spacingXl.hSpace,
                   Text(
                     l10n.onboardingSubTitle,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -71,7 +72,7 @@ class OnboardingScreen extends ConsumerWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(Sizes.spacingL),
+                          borderRadius: BorderRadius.circular(Sizes.spacingXl),
                         ),
                         textStyle: const TextStyle(
                           fontSize: Sizes.fontSize,

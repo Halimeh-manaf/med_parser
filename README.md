@@ -36,7 +36,6 @@
 * **Speech Recognition**: Incorporates ONNX models for on-device speech recognition.
 * **Onboarding**: Handles first-time user flow, completion state is persisted with shared preferences.
 
-
 ## How To Use
 
 - Make sure [FVM](https://fvm.app) is installed and Flutter 3.32.4 is installed
@@ -71,5 +70,3 @@ This software uses the following open source packages:
 - [Time Tracking app with Flutter & Firebase](https://github.com/bizz84/starter_architecture_flutter_firebase/tree/master)
 - [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx/tree/master)
 - [Zipformer: A faster and better encoder for automatic speech recognition](https://arxiv.org/abs/2310.11230)
-
-`systemd`

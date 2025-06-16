@@ -13,7 +13,7 @@ class EmptyPlaceholderWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: const EdgeInsets.all(Sizes.spacingL),
+      padding: const EdgeInsets.all(Sizes.spacingXl),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -24,7 +24,7 @@ class EmptyPlaceholderWidget extends ConsumerWidget {
               style: Theme.of(context).textTheme.headlineMedium,
               textAlign: TextAlign.center,
             ),
-            Sizes.spacingL.hSpace,
+            Sizes.spacingXl.hSpace,
             PrimaryButton(
               onPressed: () {},
               text: AppLocalizations.of(context).goHome,

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:med_parser/constants/app_sizes.dart';
 import 'package:med_parser/features/speech_to_text/presentation/speech_to_text_controller.dart';
 import 'package:med_parser/features/speech_to_text/domain/speech_to_text_state.dart';
 import 'package:med_parser/l10n/generated/app_localizations.dart/app_localizations.dart';
+import 'package:med_parser/utils/number_extension.dart';
 
 class SpeechToTextScreen extends ConsumerWidget {
   const SpeechToTextScreen({super.key});
@@ -21,13 +23,13 @@ class SpeechToTextScreen extends ConsumerWidget {
         title: Text(l10n.speechToTextAppBarTitle),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(Sizes.spacingL),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (state.error != null)
               Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.only(bottom: Sizes.spacingS),
                 child: Text(
                   state.error!,
                   style: TextStyle(color: Theme.of(context).colorScheme.error),
@@ -42,19 +44,19 @@ class SpeechToTextScreen extends ConsumerWidget {
                 textAlignVertical: TextAlignVertical.top,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
+                    borderRadius: BorderRadius.circular(Sizes.spacingS),
                     borderSide: BorderSide(color: Colors.grey.shade400),
                   ),
                   hintText: l10n.speechToTextHint,
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: Sizes.spacingL),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildRecordControl(context, state, controller),
-                const SizedBox(width: 20),
+                Sizes.spacingS.wSpace,
                 Text(state.isListening ? l10n.listening : l10n.tapToStart,
                     style: Theme.of(context).textTheme.titleMedium),
               ],
