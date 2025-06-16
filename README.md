@@ -50,6 +50,7 @@
 
 ## Architecture
 The application is following 'reference architecture' which helps to seperate between UI, business logic and data layer (aka seperation of concerns).
+![architecture overview](readme_assets/speechtotext-flow.png)
 - **Presentation**: the UI layer (e.g., buttons, text) and its controllers (e.g., updating, displaying). Generally, you will find two types inside it:
   - widget/screen: the actual UI elements
   - controller: manages the widget/screen state (providers). 

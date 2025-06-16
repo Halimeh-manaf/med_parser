@@ -29,12 +29,13 @@ class SpeechToTextController extends StateNotifier<SpeechToTextState> {
         (result) {
           if (!state.isListening) return;
 
-// Two possible cases:
-// 1. The result is final (the user has stopped speaking):
-//    - The app will accumulate the text and display it (e.g., User says "Hello", then "World" -> Text will be 'World' and _accumulatedFinalText will be 'Hello')
-// 2. The result is partial (the user is still speaking)
-//  - The app will display the current partial text (e.g., User says "Hello world! I made it here" -> The app will display the text partially as the user speaks.
-
+          // Two possible cases:
+          // 1. The result is final (the user has stopped speaking):
+          //    - The app will accumulate the text and display it
+          //    (e.g., User says "Hello", then "World" -> Text will be 'World' and _accumulatedFinalText will be 'Hello')
+          // 2. The result is partial (the user is still speaking)
+          //  - The app will display the current partial text (e.g.,
+          //    User says "Hello world! I made it here" -> The app will display the text partially as the user speaks.
           if (result.isFinal) {
             final text = result.text;
             if (text.isNotEmpty) {

@@ -17,7 +17,6 @@ class OnboardingScreen extends ConsumerWidget {
     final state = ref.watch(onboardingControllerProvider);
     final l10n = AppLocalizations.of(context);
 
-    debugPrint('OnboardingScreen build called with ${l10n.getStarted}');
     return Scaffold(
       body: Container(
         width: double.infinity,

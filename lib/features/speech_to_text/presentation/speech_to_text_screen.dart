@@ -11,7 +11,8 @@ class SpeechToTextScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final controller = ref.read(speechToTextControllerProvider.notifier);
+    final speechToTextController =
+        ref.read(speechToTextControllerProvider.notifier);
     final state = ref.watch(speechToTextControllerProvider);
     final l10n = AppLocalizations.of(context);
 
@@ -55,7 +56,7 @@ class SpeechToTextScreen extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildRecordControl(context, state, controller),
+                _buildRecordControl(context, state, speechToTextController),
                 Sizes.spacingS.wSpace,
                 Text(state.isListening ? l10n.listening : l10n.tapToStart,
                     style: Theme.of(context).textTheme.titleMedium),
