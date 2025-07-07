@@ -2,7 +2,7 @@
   MedParser
 </h1>
 
-<h4 align="center">Flutter Application that recognizes speech and converts it to Audio.</h4>
+<h4 align="center">Flutter Application that recognizes speech and converts it to Text with real time and offline</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
